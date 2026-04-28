@@ -1,326 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viraj. | Developer</title>
-    
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
-    <!-- GSAP for advanced animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Custom CSS -->
+    <title>Viraj Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+<header>
+    <nav>
+        <h2>MyPortfolio</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Background Elements -->
-    <div class="ambient-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="grid-overlay"></div>
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h1>Hello, I'm Viraj</h1>
+      <p>Aspiring Software Developer | Web Developer</p>
     </div>
 
-    <!-- Navigation -->
-    <header class="navbar gs-reveal" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo hover-target">
-                <span class="logo-mark">&lt;/&gt;</span>
-                <span class="logo-text">Viraj</span>
-            </a>
-            
-            <nav class="nav-links">
-                <a href="#about" class="nav-link hover-target" data-text="About">About</a>
-                <a href="#skills" class="nav-link hover-target" data-text="Skills">Skills</a>
-                <a href="#projects" class="nav-link hover-target" data-text="Projects">Projects</a>
-                <div class="nav-divider"></div>
-                <button id="theme-toggle" class="icon-btn hover-target" aria-label="Toggle Theme">
-                    <i class="ph-bold ph-sun"></i>
-                </button>
-                <a href="#contact" class="btn btn-outline hover-target">Let's Talk</a>
-            </nav>
-
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
-                <div class="hamburger"></div>
-            </button>
-        </div>
-        
-        <!-- Fullscreen Mobile Menu -->
-        <div class="mobile-nav" id="mobile-nav">
-            <div class="mobile-nav-content">
-                <a href="#about" class="mobile-link"><span>01.</span> About</a>
-                <a href="#skills" class="mobile-link"><span>02.</span> Skills</a>
-                <a href="#projects" class="mobile-link"><span>03.</span> Projects</a>
-                <a href="#contact" class="mobile-link"><span>04.</span> Contact</a>
-                <div class="mobile-socials mt-6">
-                    <button id="mobile-theme-toggle" class="icon-btn">Toggle Theme</button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main data-scroll-container>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge gs-hero">
-                        <span class="pulse"></span> 
-                        Available for new opportunities
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <div class="line-wrapper"><span class="line gs-title">Creative Web</span></div>
-                        <div class="line-wrapper"><span class="line gs-title"><span class="gradient-text text-glow">Developer.</span></span></div>
-                    </h1>
-                    
-                    <p class="hero-desc gs-hero">
-                        Hi, I'm <strong class="text-foreground">Viraj Khod</strong>. I craft elevated digital experiences with modern web technologies, focusing on responsive design, performance, and beautiful animations.
-                    </p>
-                    
-                    <div class="hero-cta gs-hero">
-                        <a href="#projects" class="btn btn-primary btn-lg hover-target">
-                            Explore My Work <i class="ph-bold ph-arrow-right"></i>
-                        </a>
-                        <div class="social-row">
-                            <a href="#" class="social-icon hover-target"><i class="ph-fill ph-github-logo"></i></a>
-                            <a href="#" class="social-icon hover-target"><i class="ph-fill ph-linkedin-logo"></i></a>
-                            <a href="#" class="social-icon hover-target"><i class="ph-fill ph-twitter-logo"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator gs-hero">
-                <div class="mouse"></div>
-                <span>Scroll Down</span>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="container">
-                <div class="section-badge gs-up">01. About Me</div>
-                <h2 class="section-title gs-up">Bridging design and <br>engineering.</h2>
-                
-                <div class="about-grid mt-12">
-                    <div class="about-text gs-up">
-                        <p>As a student at MIT Academy of Engineering in Pune, I've cultivated a deep passion for building robust, scalable web applications.</p>
-                        <p>I specialize in bridging the gap between design and engineering, combining my eye for <strong>minimalist aesthetics</strong> with my foundational knowledge of <strong>Python, Java, and C++</strong> to create seamless user journeys.</p>
-                    </div>
-                    
-                    <div class="about-cards">
-                        <div class="glass-card gs-up delay-1">
-                            <i class="ph-fill ph-graduation-cap card-icon"></i>
-                            <h3>Education</h3>
-                            <p>B.Tech at MIT Academy of Engineering, Pune. Always learning.</p>
-                        </div>
-                        <div class="glass-card gs-up delay-2">
-                            <i class="ph-fill ph-lightbulb card-icon"></i>
-                            <h3>Problem Solving</h3>
-                            <p>Strong analytical mindset. I love turning complex problems into simple, beautiful interfaces.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section bg-subtle">
-            <div class="container">
-                <div class="section-badge gs-up">02. Expertise</div>
-                <h2 class="section-title gs-up">Technologies I work with.</h2>
-                
-                <div class="skills-wrapper mt-12">
-                    <!-- Category 1 -->
-                    <div class="skill-group gs-up">
-                        <h3 class="skill-category-title"><i class="ph-bold ph-code"></i> Frontend</h3>
-                        <div class="tags-container">
-                            <div class="skill-tag hover-target">HTML5</div>
-                            <div class="skill-tag hover-target">CSS3/Tailwind</div>
-                            <div class="skill-tag hover-target">JavaScript</div>
-                            <div class="skill-tag hover-target">React.js</div>
-                            <div class="skill-tag hover-target">GSAP</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Category 2 -->
-                    <div class="skill-group gs-up delay-1">
-                        <h3 class="skill-category-title"><i class="ph-bold ph-terminal-window"></i> Backend & Languages</h3>
-                        <div class="tags-container">
-                            <div class="skill-tag hover-target">Python</div>
-                            <div class="skill-tag hover-target">Java</div>
-                            <div class="skill-tag hover-target">C++</div>
-                            <div class="skill-tag hover-target">Node.js</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Category 3 -->
-                    <div class="skill-group gs-up delay-2">
-                        <h3 class="skill-category-title"><i class="ph-bold ph-wrench"></i> Tools & Methods</h3>
-                        <div class="tags-container">
-                            <div class="skill-tag hover-target">Git/GitHub</div>
-                            <div class="skill-tag hover-target">Figma</div>
-                            <div class="skill-tag hover-target">Responsive Design</div>
-                            <div class="skill-tag hover-target">Problem Solving</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects section">
-            <div class="container">
-                <div class="section-badge gs-up">03. Work</div>
-                <h2 class="section-title gs-up">Featured Projects.</h2>
-                
-                <div class="projects-grid mt-12">
-                    <!-- Project 1 -->
-                    <div class="project-wrapper gs-up">
-                        <div class="project-content glass-card hover-pull-up">
-                            <div class="project-top">
-                                <i class="ph-duotone ph-folder-notch-open"></i>
-                                <div class="project-links">
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-github-logo"></i></a>
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="project-name">E-Commerce Dashboard</h3>
-                            <p class="project-desc">A comprehensive admin dashboard with real-time charts designed for managing online store sales and analytics.</p>
-                            <div class="project-tech-list">
-                                <span>React</span>
-                                <span>CSS</span>
-                                <span>Recharts</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-wrapper gs-up">
-                        <div class="project-content glass-card hover-pull-up">
-                            <div class="project-top">
-                                <i class="ph-duotone ph-folder-notch-open"></i>
-                                <div class="project-links">
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-github-logo"></i></a>
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="project-name">Weather Forecast CLI</h3>
-                            <p class="project-desc">A fast, lightweight Python command-line utility that fetches and displays real-time weather data flawlessly.</p>
-                            <div class="project-tech-list">
-                                <span>Python</span>
-                                <span>REST API</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-wrapper gs-up">
-                        <div class="project-content glass-card hover-pull-up">
-                            <div class="project-top">
-                                <i class="ph-duotone ph-folder-notch-open"></i>
-                                <div class="project-links">
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-github-logo"></i></a>
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="project-name">Task Management</h3>
-                            <p class="project-desc">Productivity web app with drag-and-drop boards, allowing teams to intuitively manage tasks and milestones.</p>
-                            <div class="project-tech-list">
-                                <span>JavaScript</span>
-                                <span>DOM</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="project-wrapper gs-up">
-                        <div class="project-content glass-card hover-pull-up">
-                            <div class="project-top">
-                                <i class="ph-duotone ph-folder-notch-open"></i>
-                                <div class="project-links">
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-github-logo"></i></a>
-                                    <a href="#" class="hover-target"><i class="ph-bold ph-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="project-name">Portfolio V1</h3>
-                            <p class="project-desc">A highly sophisticated, GSAP-animated developer portfolio built completely from scratch purely matching design aesthetics.</p>
-                            <div class="project-tech-list">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>GSAP</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-            <div class="container text-center">
-                <div class="section-badge gs-up mx-auto">04. What's Next</div>
-                <h2 class="section-title gs-up text-center mb-6">Let's build together.</h2>
-                <p class="contact-subtitle gs-up mx-auto max-w-xl text-muted">My inbox is always open. Whether you have a question, a project proposal, or just want to connect, I'll do my best to get back to you!</p>
-                
-                <div class="mt-12 gs-up">
-                    <a href="mailto:viraj24khod@gmail.com" class="btn btn-primary btn-lg hover-target mx-auto inline-flex">
-                        Say Hello <i class="ph-bold ph-paper-plane-tilt"></i>
-                    </a>
-                </div>
-                
-                <div class="contact-details mt-16 gs-up flex justify-center gap-12 flex-wrap">
-                    <div class="contact-item">
-                        <i class="ph-duotone ph-envelope-simple text-3xl mb-2 text-accent"></i>
-                        <h4 class="font-bold">Email</h4>
-                        <p class="font-mono text-sm text-muted">viraj24khod@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="ph-duotone ph-map-pin text-3xl mb-2 text-accent"></i>
-                        <h4 class="font-bold">Location</h4>
-                        <p class="font-mono text-sm text-muted">MITAOE, Pune</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-left">
-                <span class="logo-text">&lt;Viraj /&gt;</span>
-                <p class="text-sm mt-2 text-muted">© <span id="year"></span> All rights reserved.</p>
-            </div>
-            
-            <div class="footer-right">
-                <a href="#home" class="btn-top hover-target" aria-label="Back to Top">
-                    <i class="ph-bold ph-arrow-up"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Initial Loading Screen (Adds to the Wow factor) -->
-    <div class="preloader">
-        <div class="preloader-text">
-            <span>Viraj.</span>
-        </div>
+    <div class="hero-image">
+      <img src="C:\Users\Rohit\Desktop\portrfolionew\Screenshot 2026-04-28 213342.png" alt="Viraj">
     </div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h1>My Projects</h1>
+
+    <div class="card">
+        <h2>Smart Transit System</h2>
+        <p>Based on real-life transportation problems.</p>
+    </div>
+
+    <div class="card">
+        <h2>Digital Dice Project</h2>
+        <p>Electronic dice using counters and LEDs.</p>
+    </div>
+
+    <div class="card">
+        <h2>Portfolio Website</h2>
+        <p>Responsive personal portfolio using HTML & CSS.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About Me</h1>
+    <p>I am a passionate developer learning web development and AI.</p>
+    <p> I study at MIT Academy of Engineering, Pune.</p>
+    <p> I enjoy solving real-world problems and building creative solutions.</p>
+
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Machine Learning</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h1>Contact Me</h1>
+
+    <form>
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea placeholder="Your Message"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Viraj Portfolio</p>
+</footer>
+
 </body>
 </html>
